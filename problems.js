@@ -6,7 +6,8 @@ String.prototype.jumbleSort = function(x){
     let offSet = x % 26;
     let newS = ""
     for(let i = 0; i < this.length; i++){
-        newS += alpha[offSet]
+        let index = alpha.indexOf(this[i]) + offSet
+        newS += alpha[index]
     }
     return newS
 }
